@@ -27,16 +27,6 @@ const addTodo = ()=>{
    
 };
 
-const displayInput = (inputValue)=>{
-    // ** Where to display
-
-    const displayContainer = document.getElementById('todo-list');
-
-    const item = document.createElement('li');
-    item.innerText = inputValue;
-
-    displayContainer.appendChild(item)
-};
 
 // ** Store value to ls
 
@@ -95,7 +85,7 @@ const displayLsValueToUi = ()=>{
     const displayContainer = document.getElementById('todo-list');
     displayContainer.innerText = ``;
     const savedValue = getValueFromLs();
-    console.log(savedValue)
+    // console.log(savedValue)
     savedValue.length === 0 && (displayContainer.innerHTML = "No Data")
     savedValue.forEach((value,index) => {
         const {title,id} = value;
